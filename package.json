@@ -6,6 +6,15 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.dev.js --port 3000"
   },
+  "jest": {
+    "setupFiles": [
+      "./tools/testSetup.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/tools/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/tools/styleMock.js"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DopamineDriven/redux-portfolio.git"
@@ -72,5 +81,39 @@
     "presets": [
       "babel-preset-react-app"
     ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:import/errors",
+      "plugin:import/warnings"
+    ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true,
+      "jest": true
+    },
+    "rules": {
+      "no-debugger": "off",
+      "no-console": "off",
+      "no-unused-vars": "warn",
+      "react/prop-types": "warn"
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
+    "root": true
   }
 }
