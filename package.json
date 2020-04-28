@@ -1,0 +1,20 @@
+{
+  "name": "redux-portfolio",
+  "version": "1.0.0",
+  "description": "react-redux",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DopamineDriven/redux-portfolio.git"
+  },
+  "keywords": [],
+  "author": "Andrew Ross",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DopamineDriven/redux-portfolio/issues"
+  },
+  "homepage": "https://github.com/DopamineDriven/redux-portfolio#readme"
+}
