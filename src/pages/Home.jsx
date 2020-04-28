@@ -1,11 +1,11 @@
 import React from 'react';
 
-const App = () => {
+const Home = () => {
     return (
         <div>
-            Portfolio v2
+            Landing Page
         </div>
     )
 }
 
-export default App;
+export default Home;
