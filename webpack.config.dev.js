@@ -1,4 +1,4 @@
-const webpack = require("webpack");
+// const webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 process.env.NODE_ENV = "development";
@@ -23,8 +23,32 @@ module.exports = {
         disableHostCheck: true,
         headers: { "Access-Control-Allow-Origin" : "*" },
         https: false
+    },
+    // (d)
+    plugins: [
+        // new webpack.DefinePlugin({
+        //     "process.env.API_URL": JSON.stringify("http://localhost:3001")
+        // }),
+        new HtmlWebpackPlugin({
+            template: "src/index.html",
+            favicon: "src/favicon.ico"
+        })
+    ],
+    // (e)
+    module: {
+        rules: [
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                use: ["babel-loader", "eslint-loader"]
+            },
+            {
+                test: /(\.css)$/,
+                use: ["style-loader", "css-loader"]
+            }
+        ]
     }
-}
+};
 
 
 // https://webpack.js.org/guides/development/
@@ -60,9 +84,33 @@ historyApiFallback: true
     all requests sent to index.html
         can load deep links and all are handled by react-router
 disableHostCheck: true
-
+    issue with webpack in chrome
 headers: { "Access-Control-Allow-Origin" : "*" }
-
+    issue with webpack in chrome
 https: false
     only run https in prod environment
+*/
+
+/*
+(d)
+Plugins - specify an array
+    HtmlWebpackPlugin
+        accepts an object to config plugin
+            template -> src/index.html
+            favicon -> src/favicon.ico
+*/
+
+/*
+(e)
+module - tell webpack which files to handle
+    declare array of rules
+        (1) js or jsx files 
+            how to find files via regex
+            which files to exclude (node_modules)
+            then use loaders
+                eslint first then babel
+                    loaders processed from bottom up
+        (2) css files
+            combo of css-loader and style-loader
+                allows for the import of css just like js
 */
