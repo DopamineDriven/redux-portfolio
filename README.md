@@ -1,2 +1,3 @@
 # redux-portfolio
-react-redux
+- custom webpack build, react-redux, and json-server
+
