@@ -4,7 +4,8 @@
   "description": "Custom webpack build using React, Redux, and json-server",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.dev.js --port 3000"
+    "start": "webpack-dev-server --config webpack.config.dev.js --port 3000",
+    "test": "jest --watch"
   },
   "jest": {
     "setupFiles": [

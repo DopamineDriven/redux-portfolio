@@ -7,7 +7,7 @@ import { MemoryRouter } from 'react-router-dom';
 // (b)
 it("contains 3 NavLinks via shallow", () => {
     const numLinks = shallow(<Navbar />).find("NavLink").length;
-    expect(numLinks).toEqual(3)
+    expect(numLinks).toEqual(4)
 });
 
 // (c)
@@ -17,7 +17,7 @@ it("contains 3 anchors via mount", () => {
             <Navbar />
         </MemoryRouter>
     ).find("a").length;
-    expect(numAnchors).toEqual(3)
+    expect(numAnchors).toEqual(4)
 });
 
 
