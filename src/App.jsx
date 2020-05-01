@@ -11,6 +11,9 @@ import Container from './components/container/Container.jsx';
 import Wrapper from './components/wrapper/Wrapper.jsx';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+// import logo from './logo.svg';
+// add svg logo into app rendering via div className and accompanying css
+// view CRAp default settings to reverse engineer incorporation 
 
 
 
