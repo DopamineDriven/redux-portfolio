@@ -3,9 +3,8 @@ import './Navbar.css';
 // import Container from '../Container/Container.jsx'
 // import ReactLogo from '../images/Logo.png';
 import { NavLink } from 'react-router-dom';
-import logo from '../../assets/logo.svg';
 
-const Navbar = () => {
+const Navbar = (props) => {
     const activeStyle = { color: "#ffffff" }
     // use state expanded and setExpanded onClick
     // circle back
@@ -15,7 +14,26 @@ const Navbar = () => {
             <NavLink
                 to="/" 
                 className="navbar-brand">
-                <img src={logo} alt="logo" className="mb-3 app-logo" width="120px"/>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="193"
+                        height="25"
+                        viewBox="0 0 193 25"
+                        { ...props }
+                        >
+                        <text
+                            fill="#FFF"
+                            fillRule="evenodd"
+                            fontFamily="CircularStd-Bold, Circular Std"
+                            fontSize="28"
+                            fontWeight="bold"
+                            transform="translate(-180 -384)"
+                        >
+                            <tspan x="180" y="408">
+                            Andrew Ross
+                            </tspan>
+                        </text>
+                        </svg>
             </NavLink>
             
             {/* <button
