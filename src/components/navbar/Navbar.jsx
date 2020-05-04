@@ -1,13 +1,9 @@
 import React from "react";
 import "./Navbar.css";
-// import Container from '../Container/Container.jsx'
-// import ReactLogo from '../images/Logo.png';
 import { NavLink } from "react-router-dom";
 
 const Navbar = (props) => {
   const activeStyle = { color: "#ffffff" };
-  // use state expanded and setExpanded onClick
-  // circle back
   return (
     <React.Fragment>
       <nav className="navbar navbar-expand-md navbar-dark sticky-top bg-dark">
@@ -33,7 +29,6 @@ const Navbar = (props) => {
             </text>
           </svg>
         </NavLink>
-
         {/* <button
                 className="navbar-toggler"
                 type="button"
