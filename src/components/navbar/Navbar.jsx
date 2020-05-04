@@ -3,6 +3,7 @@ import './Navbar.css';
 // import Container from '../Container/Container.jsx'
 // import ReactLogo from '../images/Logo.png';
 import { NavLink } from 'react-router-dom';
+import logo from '../../assets/logo.svg';
 
 const Navbar = () => {
     const activeStyle = { color: "#ffffff" }
@@ -11,11 +12,11 @@ const Navbar = () => {
   return (
       <React.Fragment>
         <nav className="navbar navbar-expand-md navbar-dark sticky-top bg-dark">
-            {/* <NavLink
+            <NavLink
                 to="/" 
                 className="navbar-brand">
-                <img src={ReactLogo} alt="react" className="img-fluid" height="99.66px" width="99.6px"/>
-            </NavLink> */}
+                <img src={logo} alt="logo" className="mb-3 app-logo" width="120px"/>
+            </NavLink>
             
             {/* <button
                 className="navbar-toggler"

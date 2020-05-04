@@ -43,6 +43,14 @@ module.exports = {
                 use: ["babel-loader", "eslint-loader"]
             },
             {
+                test: /\.svg$/,
+                use: ["svg-inline-loader"]
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: ["file-loader"]
+            },
+            {
                 test: /(\.css)$/,
                 use: ["style-loader", "css-loader"]
             }
